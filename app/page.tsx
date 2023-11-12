@@ -8,6 +8,7 @@ import { blobToBase64 } from "@/lib/blobToBase64";
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { PreviewModal } from "@/components/PreviewModal";
+import Head from "next/head";
 
 const Tldraw = dynamic(async () => (await import("@tldraw/tldraw")).Tldraw, {
   ssr: false,
@@ -31,6 +32,7 @@ export default function Home() {
 
   return (
     <>
+
       <div className={`w-screen h-screen`}>
         <Tldraw persistenceKey="tldraw">
           <ExportButton setHtml={setHtml} />
@@ -105,7 +107,7 @@ function ExportButton({ setHtml }: { setHtml: (html: string) => void }) {
           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
         </div>
       ) : (
-        "Make Real"
+        "Code UI ->"
       )}
     </button>
   );

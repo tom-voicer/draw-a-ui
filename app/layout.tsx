@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>Draw a ui</title>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover"
